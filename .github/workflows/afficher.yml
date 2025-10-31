@@ -5,7 +5,11 @@ on:
     branches: [ "main" ]
 
 
+env:
+    WOLOLO: blablaBlabla
+
 jobs:
+
   afficher:
     runs-on: ubuntu-latest
     steps:
@@ -29,3 +33,10 @@ jobs:
             echo "::notice::Ceci est une note"
             echo "::warning::Attention, vérifie la configuration"
             echo "::error::Une erreur s’est produite"
+
+      - name: Afficher variable d'environnement
+        run: echo "La valeur de WOLOLO est ${WOLOLO}"
+
+      - name : créer des conditionq
+        if: env.WOLOLO == 'blablaBlabla'
+        run: echo "Yaaaaaaaaaaaaa"
