@@ -4,7 +4,6 @@ on:
   push:
     branches: [ "main" ]
 
-
 env:
     WOLOLO: blablaBlabla
 
@@ -37,6 +36,6 @@ jobs:
       - name: Afficher variable d'environnement
         run: echo "La valeur de WOLOLO est ${WOLOLO}"
 
-      - name : créer des conditionq
+      - name : créer des conditions
         if: env.WOLOLO == 'blablaBlabla'
         run: echo "Yaaaaaaaaaaaaa"
