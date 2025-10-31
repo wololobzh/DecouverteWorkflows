@@ -1,0 +1,14 @@
+name: Afficher des trucs
+
+on:
+  push:
+    branches: [ "main" ]
+
+
+jobs:
+  afficher:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Afficher un message
+        run: echo "Hello, world!"
+
